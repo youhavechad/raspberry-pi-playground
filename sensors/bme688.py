@@ -18,9 +18,9 @@ bme680.sea_level_pressure = 1400 # For Chicago
 # the sensor. This is usually around 5 degrees but varies by use. Use a
 # separate temperature sensor to calibrate this one.
 temperature_offset = -5
-
+temp_f = ((bme680.temperature + temperature_offset) * 9/5) + 32
 while True:
-    print("\nTemperature: %0.1f C" % (bme680.temperature + temperature_offset))
+    print("\nTemperature: %0.1f F" % temp_f)
     print("Gas: %d ohm" % bme680.gas)
     print("Humidity: %0.1f %%" % bme680.relative_humidity)
     print("Pressure: %0.3f hPa" % bme680.pressure)
