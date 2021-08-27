@@ -2,6 +2,7 @@
 # SPDX-License-Identifier: MIT
 
 # Need to update for BME688
+# Explore sensor and machine learning for Bosch.
 
 import time
 import board
